@@ -2,9 +2,6 @@ const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
 const mainBody = document.getElementsById('main-body')
-// let products = [{id: "product1", name: "product1", price: 3000}]
-let cart = []
-let wishlist = []
 
 if(bar) {
   bar.addEventListener('click', () => {
@@ -48,35 +45,3 @@ function checkTheme() {
       document.body.classList.add("dark-mode");
   }
 }
-
-// Product Data
-const products = [
-  { id: 1, name: "Laptop", category: "electronics" , price: 40000},
-  { id: 2, name: "Smartphone", category: "electronics" },
-  { id: 3, name: "T-Shirt", category: "clothing" },
-  { id: 4, name: "Jeans", category: "clothing" }
-];
-
-// Function to display products
-function displayProducts(filteredProducts) {
-  const container = document.getElementById("productContainer");
-  container.innerHTML = ""; 
-
-  filteredProducts.forEach(product => {
-      const productDiv = document.createElement("div");
-      productDiv.className = "product";
-      productDiv.innerHTML = `<h3>${product.name}</h3><p>Category: ${product.category}</p>`;
-      container.appendChild(productDiv);
-  });
-}
-
-displayProducts(products);
-
-document.getElementById("categoryFilter").addEventListener("change", function() {
-  const selectedCategory = this.value;
-  const filteredProducts = selectedCategory === "all" 
-      ? products 
-      : products.filter(product => product.category === selectedCategory);
-
-  displayProducts(filteredProducts);
-});
