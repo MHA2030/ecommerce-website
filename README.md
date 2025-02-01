@@ -8,12 +8,6 @@ Features
 
 🛒 Shopping Cart - Add, remove, and update items in the cart.
 
-❤️ Wishlist - Save favorite products for later.
-
-🔍 Product Filtering - Filter products by categories, price range, and other attributes.
-
-💲 Currency Converter - Switch between different currencies dynamically.
-
 Technologies Used
 
 HTML - Structure of the website.
